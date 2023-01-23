@@ -142,9 +142,9 @@ include_directories(
 ## The recommended prefix ensures that target names across packages don't collide
 # add_executable(${PROJECT_NAME}_node src/assignment_2_2022_node.cpp)
 
- add_executable(interface src/node_a.cpp)
- add_executable(goal_info src/node_b.cpp)
- add_executable(robot_info src/node_c.cpp)
+ add_executable(node_a src/node_a.cpp)
+ add_executable(node_b src/node_b.cpp)
+ add_executable(node_c src/node_c.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -161,13 +161,13 @@ include_directories(
 #   ${catkin_LIBRARIES}
 # )
 
- target_link_libraries(interface
+ target_link_libraries(node_a
    ${catkin_LIBRARIES}
  )
- target_link_libraries(goal_info
+ target_link_libraries(node_b
    ${catkin_LIBRARIES}
  )
- target_link_libraries(robot_info
+ target_link_libraries(node_c
    ${catkin_LIBRARIES}
  )
 

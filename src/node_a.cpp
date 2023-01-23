@@ -5,6 +5,7 @@
 #include <actionlib/client/terminal_state.h>
 #include "nav_msgs/Odometry.h"
 #include "assignment_2_2022/Info.h"
+#include "assignment_2_2022/Goal.h"
 #include <assignment_2_2022/PlanningAction.h>
 
 float x, y, vel_x, vel_y;
@@ -13,7 +14,7 @@ void data_Callback(const nav_msgs::Odometry::ConstPtr& data){
 	x = data->pose.pose.position.x;
 	y = data->pose.pose.position.y;
 	vel_x = data->twist.twist.linear.x;
-	vel_y = data->twist.teist.linear.y;
+	vel_y = data->twist.twist.linear.y;
 }
 
 int main(int argc, char **argv){
@@ -32,9 +33,9 @@ int main(int argc, char **argv){
 	std::string input; //input from terminal
 	actionlib::SimpleActionClient<assignment_2_2022::PlanningAction> ac("/reaching_goal", true);
 	ac.waitForServer(); //waiting for action server start
-	assignment::PlanningGoal target;
-	target.target_pose.position.x = x;
-	target.target_pose.position.y = y;
+	assignment_2_2022::PlanningGoal target;
+	target.target_pose.pose.position.x = x;
+	target.target_pose.pose.position.y = y;
 	ac.sendGoal(target);
 	
 	bool finished_before_timeout = ac.waitForResult(ros::Duration(40.0));
@@ -58,9 +59,9 @@ int main(int argc, char **argv){
 			std::cout << "Please enter new goal position (x, y): " << std::endl;
 			std::cin >> x >> y;
 			//send new goal
-			target.target_pose.position.x = x;
-			target.target_pose.position.y = y;
-			ac.snedGoal(target);
+			target.target_pose.pose.position.x = x;
+			target.target_pose.pose.position.y = y;
+			ac.sendGoal(target);
 			//update rosparam
 			ros::param::set("des_pos_x", x);
 			ros::param::set("des_pos_y", y);
@@ -78,7 +79,6 @@ int main(int argc, char **argv){
 		}
 		finished_before_timeout = ac.waitForResult(ros::Duration(40.0));
 		ros::spinOnce();
-		loop_rate.sleep();
 	}
 	
 	if (finished_before_timeout){
