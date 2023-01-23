@@ -18,7 +18,7 @@ void data_Callback(const nav_msgs::Odometry::ConstPtr& data){
 
 int main(int argc, char **argv){
 
-	ros::init(argc, argv, "node_a");
+	ros::init(argc, argv, "interface");
 	ros::NodeHandle n;
 
 	//To publish robot_data

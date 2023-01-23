@@ -62,6 +62,7 @@ find_package(catkin REQUIRED COMPONENTS
 
 ## Generate services in the 'srv' folder
  add_service_files(
+   FILES
    Goal.srv
  )
 
@@ -141,6 +142,10 @@ include_directories(
 ## The recommended prefix ensures that target names across packages don't collide
 # add_executable(${PROJECT_NAME}_node src/assignment_2_2022_node.cpp)
 
+ add_executable(interface src/node_a.cpp)
+ add_executable(goal_info src/node_b.cpp)
+ add_executable(robot_info src/node_c.cpp)
+
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
 ## target back to the shorter version for ease of user use
@@ -155,6 +160,16 @@ include_directories(
 # target_link_libraries(${PROJECT_NAME}_node
 #   ${catkin_LIBRARIES}
 # )
+
+ target_link_libraries(interface
+   ${catkin_LIBRARIES}
+ )
+ target_link_libraries(goal_info
+   ${catkin_LIBRARIES}
+ )
+ target_link_libraries(robot_info
+   ${catkin_LIBRARIES}
+ )
 
 #############
 ## Install ##
