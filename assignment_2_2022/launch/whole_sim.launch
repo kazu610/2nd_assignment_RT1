@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<launch>
+    <include file="$(find assignment_2_2022)/launch/assignment1.launch" />
+    
+    <!-- Setting frequency for node_c(robot_info) and goal counters -->
+    <param name="freq" type="double" value="1.0" />
+    
+    <!-- Launch nodes -->
+    <node pkg="assignment_2_2022" type="node_a1" name="node_a1" output="screen" launch-prefix="xterm -e" />
+    <node pkg="assignment_2_2022" type="node_a2" name="node_a2" />
+    <node pkg="assignment_2_2022" type="node_b" name="node_b" output="screen" />
+    <node pkg="assignment_2_2022" type="node_c" name="node_c" output="screen" launch-prefix="xterm -e" />
+    
+
+</launch>

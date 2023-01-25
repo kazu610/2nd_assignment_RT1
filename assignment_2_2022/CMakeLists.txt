@@ -111,7 +111,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
 #  INCLUDE_DIRS include
-#  LIBRARIES assignment_2_2022
+  LIBRARIES assignment_2_2022
 #  CATKIN_DEPENDS actionlib actionlib_msgs geometry_msgs nav_msgs roscpp rospy sensor_msgs std_msgs std_srvs tf
 #  DEPENDS system_lib
 )
@@ -142,7 +142,8 @@ include_directories(
 ## The recommended prefix ensures that target names across packages don't collide
 # add_executable(${PROJECT_NAME}_node src/assignment_2_2022_node.cpp)
 
- add_executable(node_a src/node_a.cpp)
+ add_executable(node_a1 src/node_a1.cpp)
+  add_executable(node_a2 src/node_a2.cpp)
  add_executable(node_b src/node_b.cpp)
  add_executable(node_c src/node_c.cpp)
 
@@ -156,12 +157,20 @@ include_directories(
 ## same as for the library above
 # add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
+add_dependencies(node_a1 ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(node_a2 ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(node_b ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(node_c ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+
 ## Specify libraries to link a library or executable target against
 # target_link_libraries(${PROJECT_NAME}_node
 #   ${catkin_LIBRARIES}
 # )
 
- target_link_libraries(node_a
+ target_link_libraries(node_a1
+   ${catkin_LIBRARIES}
+ )
+  target_link_libraries(node_a2
    ${catkin_LIBRARIES}
  )
  target_link_libraries(node_b
