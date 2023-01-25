@@ -50,15 +50,19 @@ $ roslaunch assignment_2_2022 whole_sim.launch
 In addition to the main terminal where you launched, you will find 4 new windows below.
 
 1. Gazebo: 3D simulator for ROS
+
 ![gazebo](https://user-images.githubusercontent.com/114085558/214564797-c4289448-b997-4028-b260-fe54f85acb47.png)
 
 2. Rviz: tool for ROS visualization
+
 ![rviz](https://user-images.githubusercontent.com/114085558/214564805-d94743c1-58e0-4359-bb2c-f0362eaf1842.png)
 
 3. Interface (node_a1) : you can set/cancel the goal
+
 ![node_a1](https://user-images.githubusercontent.com/114085558/214564800-15458386-1b5b-4612-9d23-52b75771b42d.png)
 
 4. robot_info (node_c) : you can check the distance and average speed of the robot
+
 ![node_c](https://user-images.githubusercontent.com/114085558/214564802-9ed5cce7-4f84-4039-a6e5-d854c7eb5994.png)
 
 
