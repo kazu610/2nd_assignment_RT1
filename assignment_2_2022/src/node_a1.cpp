@@ -1,3 +1,25 @@
+/**
+ *\file node_a1.cpp
+ *\brief Node for interface
+ *\author Kazuto Muto
+ *\version 0.1
+ *\date 30/04/2023
+ *
+ *\details
+ *
+ *Service client: <BR>
+ * /goal_info
+ *
+ *Action client: <BR>
+ * /reaching_goal
+ *
+ *Descriptions:
+ *
+ *This node works as the interface that enables the user to set new goal and cancel 
+ *the current goal.
+ *
+*/
+
 #include "ros/ros.h"
 #include <actionlib/client/simple_action_client.h>
 #include <actionlib/client/terminal_state.h>
@@ -5,7 +27,11 @@
 #include <assignment_2_2022/PlanningAction.h>
 
 //Variables for setting new goal
-double x_new, y_new;
+double x_new, y_new; ///<Variables for setting new goal.
+
+/**
+*\brief Main function
+*/
 
 int main(int argc, char **argv){
 	
