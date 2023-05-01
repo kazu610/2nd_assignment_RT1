@@ -1,7 +1,10 @@
 2nd_assignment_RT1
 ================================
 
-This Repository is for the second assigmnent of Research Track 1
+This Repository is for the second assigmnent of Research Track 1.
+
+Visit the documentation for this repository:
+https://kazu610.github.io/2nd_assignment_RT1/index.html
 
 Introduction
 ------------
