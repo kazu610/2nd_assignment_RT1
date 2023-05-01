@@ -1,3 +1,25 @@
+/**
+ *\file node_a2.cpp
+ *\brief Node for publisher
+ *\author Kazuto Muto
+ *\version 0.1
+ *\date 01/05/2023
+ *
+ *\details
+ *
+ *Subscribe to: <BR>
+ * /odom
+ *
+ *Publish to: <BR>
+ * /robot_data
+ *
+ *Descriptions:
+ *
+ *This node publishes the topic /robot_data which contains the position and velocity of the   
+ *robot.
+ *
+*/
+
 #include "ros/ros.h"
 #include <unistd.h>
 #include "nav_msgs/Odometry.h"
