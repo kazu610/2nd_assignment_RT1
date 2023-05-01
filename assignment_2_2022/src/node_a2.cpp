@@ -26,7 +26,18 @@
 #include "assignment_2_2022/Info.h"
 
 //Variables for the corrent position and velocity of the robot
-double x, y, vel_x, vel_y, freq;
+double x; ///<Variables to pass x position from /odom to /robot_data.
+double y; ///<Variables to pass y position from /odom to /robot_data.
+double vel_x; ///<Variables to pass x velocity from /odom to /robot_data.
+double vel_y; ///<Variables to pass y velocity from /odom to /robot_data.
+double freq; ///<Variables to set frequency to publish /robot_data.
+
+/**
+*\brief Callback function for subscriber of /odom.
+*\param data defines subscribed Odometry data
+*
+*In this callback function subscribed data are substituted to double variables to publish /robot_data. 
+*/
 
 void data_Callback(const nav_msgs::Odometry::ConstPtr& data){
 
@@ -37,6 +48,16 @@ void data_Callback(const nav_msgs::Odometry::ConstPtr& data){
 	vel_y = data->twist.twist.linear.y;
 	
 }
+
+/**
+*\brief Main function to implement publisher.
+*\param argc
+*\param argv
+*\return always 0
+*
+*This function works as the publisher. I made a custom messages Info composed of the position x, y, and the velocity vel_x, vel_y. The name of the topic 
+*is /robot_data.
+*/
 
 int main(int argc, char **argv){
 	

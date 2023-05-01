@@ -27,10 +27,18 @@
 #include <assignment_2_2022/PlanningAction.h>
 
 //Variables for setting new goal
-double x_new, y_new; ///<Variables for setting new goal.
+double x_new; ///<Variables for setting x position of new goal.
+double y_new; ///<Variables for setting y position of new goal.
 
 /**
-*\brief Main function
+*\brief Main function to implement interface.
+*\param argc
+*\param argv
+*\return always 0
+*
+*This function works as the action client and the service client. After the action client 
+*confirms that the action server /reaching_goal started, it enters the while loop to allow 
+*the user to input.
 */
 
 int main(int argc, char **argv){
