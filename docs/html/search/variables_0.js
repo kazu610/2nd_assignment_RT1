@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['y_5fnew_7',['y_new',['../node__a1_8cpp.html#a3cc29d9b9ab8b4112c11796d096f0b91',1,'node_a1.cpp']]]
+  ['freq_15',['freq',['../node__a2_8cpp.html#a26aea75a25190af8d4bebf654888935d',1,'node_a2.cpp']]]
 ];

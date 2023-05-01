@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['node_5fa1_2ecpp_1',['node_a1.cpp',['../node__a1_8cpp.html',1,'']]],
-  ['node_5fa2_2ecpp_2',['node_a2.cpp',['../node__a2_8cpp.html',1,'']]]
+  ['freq_1',['freq',['../node__a2_8cpp.html#a26aea75a25190af8d4bebf654888935d',1,'node_a2.cpp']]]
 ];
