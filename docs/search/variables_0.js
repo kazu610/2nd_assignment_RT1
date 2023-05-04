@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['freq_15',['freq',['../node__a2_8cpp.html#a26aea75a25190af8d4bebf654888935d',1,'node_a2.cpp']]]
+  ['cancelled_5fgoals_35',['cancelled_goals',['../node__b_8cpp.html#a10d0de2654edc7bd4603b10faaff5d65',1,'node_b.cpp']]],
+  ['count_36',['count',['../node__c_8cpp.html#ad43c3812e6d13e0518d9f8b8f463ffcf',1,'node_c.cpp']]]
 ];
