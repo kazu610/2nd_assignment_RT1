@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['y_20',['y',['../node__a2_8cpp.html#ab927965981178aa1fba979a37168db2a',1,'node_a2.cpp']]],
-  ['y_5fnew_21',['y_new',['../node__a1_8cpp.html#a3cc29d9b9ab8b4112c11796d096f0b91',1,'node_a1.cpp']]]
+  ['reached_5fgoals_40',['reached_goals',['../node__b_8cpp.html#a891af959cc182bf72382d3deca0eccb8',1,'node_b.cpp']]]
 ];

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['vel_5fx_5',['vel_x',['../node__a2_8cpp.html#aa28e83f1aeabe23d806450842a7b8de2',1,'node_a2.cpp']]],
-  ['vel_5fy_6',['vel_y',['../node__a2_8cpp.html#ad96d80a2d23bd4be1d04d8d4076c0250',1,'node_a2.cpp']]]
+  ['goal_5fnumber_6',['goal_number',['../node__b_8cpp.html#aa5a4457c55db057dbdec28eaf797a876',1,'node_b.cpp']]]
 ];

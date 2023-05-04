@@ -70,7 +70,7 @@ bool goal_number(assignment_2_2022::Goal::Request &req, assignment_2_2022::Goal:
 }
 
 /**
-*\brief Main function to the service server which publishes the number of reached/cancelled goals.
+*\brief Main function for the service server which publishes the number of reached/cancelled goals.
 *
 *\param argc
 *\param argv
