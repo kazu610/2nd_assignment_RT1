@@ -63,7 +63,8 @@ double distance(double p_x, double p_y){
 *
 *\return ave_vel the average speed of the robot
 *
-*This function 'average_speed' computes the average speed. The variable 'vel' is the sum of the speed from the beginning and the variable 'count' is the number of subscribing. *The average speed 'ave_vel' is computed by deviding vel by 'count'.
+*This function 'average_speed' computes the average speed. The variable 'vel' is the sum of the speed from the beginning and the variable 'count' is the number of subscribing. 
+*The average speed 'ave_vel' is computed by deviding vel by 'count'.
 */
 double average_speed(double v_x, double v_y){
 
