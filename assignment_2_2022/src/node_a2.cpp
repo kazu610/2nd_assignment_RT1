@@ -26,15 +26,15 @@
 #include "assignment_2_2022/Info.h"
 
 //Variables for the corrent position and velocity of the robot
-double x; ///<Variables to pass x position from /odom to /robot_data.
-double y; ///<Variables to pass y position from /odom to /robot_data.
-double vel_x; ///<Variables to pass x velocity from /odom to /robot_data.
-double vel_y; ///<Variables to pass y velocity from /odom to /robot_data.
-double freq; ///<Variables to set frequency to publish /robot_data.
+double x; ///<Variable to pass x position from /odom to /robot_data.
+double y; ///<Variable to pass y position from /odom to /robot_data.
+double vel_x; ///<Variable to pass x velocity from /odom to /robot_data.
+double vel_y; ///<Variable to pass y velocity from /odom to /robot_data.
+double freq; ///<Variable to set frequency to publish /robot_data.
 
 /**
 *\brief Callback function for subscriber of /odom.
-*\param data defines subscribed Odometry data
+*\param data defines the subscribed Odometry data
 *
 *In this callback function subscribed data are substituted to double variables to publish /robot_data. 
 */
@@ -55,8 +55,8 @@ void data_Callback(const nav_msgs::Odometry::ConstPtr& data){
 *\param argv
 *\return always 0
 *
-*This function works as the publisher. I made a custom messages Info composed of the position x, y, and the velocity vel_x, vel_y. The name of the topic 
-*is /robot_data.
+*This function works as the publisher. I made a custom message Info composed of the position x, y, the velocity vel_x, and vel_y. The name of the topic 
+*is /robot_data. This function subscribes to the topic /odom to get robot information.
 */
 
 int main(int argc, char **argv){

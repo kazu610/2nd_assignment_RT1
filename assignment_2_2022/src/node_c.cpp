@@ -36,9 +36,9 @@ int count = 1; ///<Variables to count loops.
 *
 *\param p_y defines the y position of the robot
 *
-*\return dist the distance
+*\return dist the computed distance
 *
-*This function distance computes the distance to the goal, which is executed in data_Callback function. 
+*This function 'distance' computes the distance to the goal, which is executed in data_Callback function. 
 *This function retrieves the goal's position from ROS parameters.
 */
 double distance(double p_x, double p_y){
@@ -63,7 +63,7 @@ double distance(double p_x, double p_y){
 *
 *\return ave_vel the average speed of the robot
 *
-*This function average_speed computes the average speed. The variable vel is the sum of the speed from the beginning and count is the number of subscribing. *The average speed ave_vel is computed by deviding vel by count.
+*This function 'average_speed' computes the average speed. The variable 'vel' is the sum of the speed from the beginning and the variable 'count' is the number of subscribing. *The average speed 'ave_vel' is computed by deviding vel by 'count'.
 */
 double average_speed(double v_x, double v_y){
 

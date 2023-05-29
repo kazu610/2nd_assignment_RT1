@@ -1,6 +1,6 @@
 /**
  *\file node_a1.cpp
- *\brief Node for interface
+ *\brief Node for user interface
  *\author Kazuto Muto
  *\version 0.1
  *\date 30/04/2023
@@ -15,7 +15,7 @@
  *
  *Descriptions:
  *
- *This node works as the interface that enables the user to set new goal and cancel 
+ *This node works as the user interface that enables the user to set a new goal and cancel 
  *the current goal.
  *
 */
@@ -27,18 +27,19 @@
 #include <assignment_2_2022/PlanningAction.h>
 
 //Variables for setting new goal
-double x_new; ///<Variables for setting x position of new goal.
-double y_new; ///<Variables for setting y position of new goal.
+double x_new; ///<Variable for setting x position of a new goal.
+double y_new; ///<Variable for setting y position of a new goal.
 
 /**
-*\brief Main function to implement interface.
+*\brief Main function to implement user interface.
 *\param argc
 *\param argv
 *\return always 0
 *
 *This function works as the action client and the service client. After the action client 
 *confirms that the action server /reaching_goal started, it enters the while loop to allow 
-*the user to input.
+*the user to input 'g' or 'c' to set a new goal or cancel the current one. 
+*When the current goal is cancelled, this node send a request to node_b which increments the number of the cancelled goals.
 */
 
 int main(int argc, char **argv){

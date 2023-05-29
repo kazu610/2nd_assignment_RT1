@@ -1,6 +1,6 @@
 /**
  *\file node_b.cpp
- *\brief Node for display the number of reached/cancelled goals when called.
+ *\brief Node for displaying the number of reached/cancelled goals when called.
  *\author Kazuto Muto
  *\version 0.1
  *\date 03/05/2023
@@ -26,15 +26,15 @@
 #include <assignment_2_2022/PlanningAction.h>
 
 //Goal counters
-int reached_goals = 0; ///<Variables to count reached goal.
-int cancelled_goals = 0; ///<Variables to count cancelled goal.
+int reached_goals = 0; ///<Variable to count the reached goal.
+int cancelled_goals = 0; ///<Variable to count the cancelled goal.
 
 /**
 *\brief Callback function for subscriber of /reaching_goal/result.
 *\param msg defines subscribed PlanningActionResult data
 *
 *Every time the node subscribes /reaching_goal/result, it checks if the status is SUCCEEDED(3), 
-*which means the goal was reached. And it displays the goal's number and the variable reached_goals 
+*which means the goal has been reached. And it displays the each goal's number and the variable reached_goals 
 *is incremented by one when the current goal was reached.
 */
 
@@ -56,7 +56,7 @@ void status_Callback(const assignment_2_2022::PlanningActionResult::ConstPtr& ms
 *\param res response to the service client.
 *\return always true
 *
-*When the service client (node_a2) sends request, the variable cancelled_goals is incremented by one and the server responds.
+*When the service client (node_a2) sends a request, the variable cancelled_goals is incremented by one and the server responds.
 */
 
 bool goal_number(assignment_2_2022::Goal::Request &req, assignment_2_2022::Goal::Response &res){
@@ -77,9 +77,9 @@ bool goal_number(assignment_2_2022::Goal::Request &req, assignment_2_2022::Goal:
 *
 *\return always 0
 *
-*This node works as the service server which publishes the number of reached/cancelled goals. 
+*This node works as the service server which returns the number of reached/cancelled goals. 
 *I made a custom service definded as Goal to recieve the notification of cancelling as request 
-*and publish the goal's number as response.
+*and to publish the goal's number as response.
 *
 */
 
